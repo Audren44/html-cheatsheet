@@ -6,3 +6,64 @@ Images (images.html) :
     Balises : <img>, <figure>, <figcaption>.
     Explication sur les attributs comme src, alt, width, height, et les bonnes pratiques pour l'optimisation des images.
 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ajouter des images en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Ajouter des images en HTML</h1>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+		</header>
+
+		<section>
+			<h2>Utiliser la balise <code>&lt;img /&gt;</code></h2>
+			<p>
+				La balise <code>&lt;img /&gt;</code> est utilisée pour afficher une
+				image dans une page HTML. Elle est auto-fermante et nécessite au minimum
+				un attribut <code>src</code> pour spécifier l'URL de l'image.
+			</p>
+			<p>Exemple :</p>
+			<pre>
+&lt;img src="https://pixabay.com/fr/images/download/raccoon-8504925_640.png" /&gt;
+			</pre
+			>
+		</section>
+
+		<section>
+			<h2>Attributs optionnels</h2>
+			<p>
+				En plus de <code>src</code>, d'autres attributs peuvent être utilisés
+				avec la balise <code>&lt;img /&gt;</code> :
+			</p>
+			<ul>
+				<li>
+					<code>alt</code> : Donne une description alternative de l'image pour
+					les utilisateurs malvoyants ou lorsque l'image ne peut pas être
+					chargée.
+				</li>
+				<li>
+					<code>width</code> : spécifie la largeur de l’image en pixels. La
+					hauteur s’ajuste en fonction.
+				</li>
+			</ul>
+			<p>Exemple :</p>
+			<pre>
+&lt;img src="https://pixabay.com/fr/images/download/raccoon-8504925_640.png" 
+     alt="Un raton laveur mignon sort la tête d'une poubelle les yeux écarquillés"
+     width="300" /&gt;
+			</pre
+			>
+		</section>
+
+		<footer>
+			<p>Cheatsheet HTML par Code Bazar</p>
+		</footer>
+	</body>
+</html>

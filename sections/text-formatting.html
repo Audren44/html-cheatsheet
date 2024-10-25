@@ -1,7 +1,80 @@
 <!-- @format -->
 <!-- 
-    Formattage de texte (text-formatting.html) :
-
-    Balises : <p>, <strong>, <em>, <b>, <i>, <br>, <hr>, <blockquote>, <cite>.
+    Balises : <em>, <b>, <i>, <br>, <hr>, <blockquote>, <cite>.
     Explication des balises de mise en forme du texte. 
 -->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mise en forme du texte en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Mise en forme du texte en HTML</h1>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+		</header>
+
+		<section>
+			<h2>Les Paragraphes</h2>
+			<p>
+				En HTML, les paragraphes sont créés à l'aide de la balise
+				<code>&lt;p&gt;</code>. Ils permettent de structurer le texte en blocs
+				lisibles. En ce moment-même tu es en train de lire un paragraphe. Avec
+				les balises ça donne :
+			</p>
+			<pre>
+                    &lt;p&gt;Exemple de paragraphe&lt;/p&gt;
+                    </pre
+			>
+		</section>
+
+		<section>
+			<h2>Donner de l’importance à une partie du texte</h2>
+			<p>
+				La balise <code>&lt;strong&gt;</code> est utilisée pour indiquer qu'un
+				texte est important. Par défaut, cela rend le texte en gras.
+			</p>
+			<pre>
+                    &lt;strong&gt;Texte important&lt;/strong&gt;
+            </pre
+			>
+			<p>Voici un exemple :</p>
+			<p>
+				Il est <strong>important</strong> de bien structurer votre code HTML.
+			</p>
+		</section>
+
+		<section>
+			<h2>Inline vs Block</h2>
+			<p>
+				Il y a deux catégories d'éléments en HTML : les éléments dits "inline"
+				(en ligne) et les éléments de type "block". Les éléments inline
+				s’affichent sur la même ligne (ex : <code>&lt;strong&gt;</code>). Les
+				élements block prennent toute la largeur de la page (ex :
+				<code>&lt;h1&gt;</code>)
+			</p>
+		</section>
+
+		<section>
+			<h2>Emphase</h2>
+			<p>
+				Le texte dans la balise <code>&lt;em&gt;</code> s'affiche en italique et
+				est lu comme un élément remarquable.
+			</p>
+			<p>
+				Exemple : les chats sont les membres de la famille des <em>félins</em>,
+				et ils partagent de nombreuses caractéristiques avec leurs cousins les
+				lions, les tigres et les panthères.
+			</p>
+		</section>
+
+		<footer>
+			<p>Cheatsheet HTML par Code Bazar</p>
+		</footer>
+	</body>
+</html>
