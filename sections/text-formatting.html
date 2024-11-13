@@ -34,6 +34,19 @@
 		</section>
 
 		<section>
+			<h2>Ajouter un commentaire</h2>
+			<p>Les commentaires en HTML sont ajoutés avec la syntaxe suivante :</p>
+			<pre>
+				&lt;!-- Je suis un commentaire --&gt;
+			</pre
+			>
+			<p>
+				Les commentaires ne sont pas affichés dans le navigateur, mais ils
+				aident à documenter le code.
+			</p>
+		</section>
+
+		<section>
 			<h2>Donner de l’importance à une partie du texte</h2>
 			<p>
 				La balise <code>&lt;strong&gt;</code> est utilisée pour indiquer qu'un
@@ -73,8 +86,154 @@
 			</p>
 		</section>
 
+		<section>
+			<h2>
+				Les balises <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>,
+				<code>&lt;u&gt;</code> - Gras, italique, souligné
+			</h2>
+			<p>
+				Les balises <code>&lt;b&gt;</code> (gras),
+				<code>&lt;i&gt;</code> (italique), et <code>&lt;u&gt;</code> (souligné)
+				sont souvent utilisées pour modifier le style des éléments textuels.
+				Cependant, elles ne fournissent aucune signification sémantique et
+				peuvent poser des problèmes d'accessibilité et de référencement.
+			</p>
+
+			<h3>Pourquoi éviter ces balises ?</h3>
+			<ul>
+				<li>
+					Ces balises n'indiquent pas le but ou la fonction du contenu, ce qui
+					peut rendre difficile la compréhension pour les lecteurs d'écran.
+				</li>
+				<li>
+					Pour le référencement, les moteurs de recherche ne peuvent pas
+					interpréter ces balises de manière significative, ce qui peut affecter
+					le SEO.
+				</li>
+			</ul>
+
+			<h3>Alternatives sémantiques</h3>
+			<p>
+				Il est préférable d'utiliser des balises sémantiques pour donner un sens
+				au contenu :
+			</p>
+			<ul>
+				<li>
+					<code>&lt;strong&gt;</code> : pour indiquer une importance accrue
+					(équivalent au gras).
+				</li>
+				<li>
+					<code>&lt;em&gt;</code> : pour indiquer une emphase (équivalent à
+					l'italique).
+				</li>
+				<li><code>&lt;mark&gt;</code> : pour mettre en évidence un texte.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Balises d'accessibilité</h2>
+			<p>
+				Certaines balises HTML sont conçues pour améliorer l'accessibilité de
+				vos pages et fournir des informations supplémentaires aux utilisateurs
+				et moteurs de recherche.
+			</p>
+
+			<h3><code>&lt;abbr&gt;</code> - Abréviation</h3>
+			<p>
+				La balise <code>&lt;abbr&gt;</code> est utilisée pour indiquer qu’un mot
+				ou une expression est une abréviation. Elle améliore l'accessibilité et
+				le référencement, car elle permet de voir le texte complet de
+				l'abréviation en survolant avec la souris.
+			</p>
+			<pre>
+				&lt;p&gt;
+					Site réalisé en &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;,
+					&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; et
+					&lt;abbr title="JavaScript"&gt;JS&lt;/abbr&gt;.
+				&lt;/p&gt;
+			</pre
+			>
+			<p>
+				Exemple d'affichage : Site réalisé en
+				<abbr title="HyperText Markup Language">HTML</abbr>,
+				<abbr title="Cascading Style Sheets">CSS</abbr> et
+				<abbr title="JavaScript">JS</abbr>.
+			</p>
+		</section>
+
+		<section>
+			<h2>Ajouter un bloc de code en HTML</h2>
+			<p>
+				On peut indiquer qu'un bloc contient du code dans un langage de
+				programmation en utilisant les balises <code>&lt;pre&gt;</code> et
+				<code>&lt;code&gt;</code>. La balise <code>&lt;code&gt;</code> est
+				utilisée pour le code en ligne, tandis que la balise
+				<code>&lt;pre&gt;</code> conserve la mise en forme (espaces, sauts de
+				ligne, etc.) d'un bloc de code entier.
+			</p>
+			<p>
+				<strong>Attention :</strong> Si on essaie d'écrire du code HTML dans un
+				document HTML, le navigateur va l'interpréter comme du code HTML.
+			</p>
+			<p>Pour éviter cela, on remplace :</p>
+			<ul>
+				<li>& par <code>&amp;amp;</code></li>
+				<li>&lt; par <code>&amp;lt;</code></li>
+				<li>&gt; par <code>&amp;gt;</code></li>
+				<li>" par <code>&amp;quot;</code></li>
+			</ul>
+			<p>Par exemple, pour obtenir ce morceau ci-dessous :</p>
+			<pre>
+	<code>
+		&lt;pre&gt;
+			&lt;code&gt;
+				&lt;h1&gt;Hello, world&lt;/h1&gt;
+				&lt;h2&gt;Welcome to my Website&lt;/h2&gt;
+			&lt;/code&gt;
+		&lt;/pre&gt;
+	</code>
+</pre>
+			<p>J'ai dû écrire dans mon éditeur :</p>
+			<pre>
+	<code>
+		&amp;lt;pre&amp;gt;
+			&amp;lt;code&amp;gt;
+				&amp;lt;h1&amp;gt;Hello, world&amp;lt;/h1&amp;gt;
+				&amp;lt;h2&amp;gt;Welcome to my Website&amp;lt;/h2&amp;gt;
+			&amp;lt;/code&amp;gt;
+		&amp;lt;/pre&amp;gt;
+	</code>
+</pre>
+		</section>
+
+		<section>
+			<h2>Bloc de citation : <code>&lt;blockquote&gt;</code></h2>
+			<p>
+				La balise <code>&lt;blockquote&gt;</code> est utilisée pour représenter
+				une citation longue provenant d'une autre source. Elle est généralement
+				stylisée différemment pour indiquer qu'il s'agit d'un extrait de texte
+				cité.
+			</p>
+
+			<h3>Exemple de balise <code>&lt;blockquote&gt;</code> :</h3>
+			<pre>
+				&lt;blockquote cite="https://fr.wikipedia.org/wiki/Chat"&gt;
+					Les chats sont les membres de la famille des félins, 
+					et ils partagent de nombreuses caractéristiques avec 
+					leurs cousins les lions, les tigres et les panthères.
+				&lt;/blockquote&gt;
+			</pre
+			>
+
+			<h3>Attribut <code>cite</code></h3>
+			<p>
+				L'attribut <code>cite</code> permet de spécifier l'URL de la source
+				d'origine de la citation, offrant ainsi un lien vers le texte original.
+			</p>
+		</section>
+
 		<footer>
-			<p>Cheatsheet HTML par Code Bazar</p>
+			<p>Cheatsheet HTML par Audren</p>
 		</footer>
 	</body>
 </html>

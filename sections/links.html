@@ -6,3 +6,177 @@ Liens (links.html) :
     Balises : <a>, <link>.
     Explication sur l'attribut href, les ancres, les liens internes et externes, et les bonnes pratiques pour les liens accessibles.
 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les liens en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Les liens en HTML</h1>
+			<nav>
+				<p>Retourner sur la <a href="../index.html">page d'accueil</a></p>
+			</nav>
+		</header>
+		<section>
+			<h2>Liens hypertexte - Relier deux pages entre elles</h2>
+			<p>
+				Un lien hypertexte est un lien qui permet de naviguer d'une page à une
+				autre, en cliquant dessus. Un lien hypertexte peut rediriger vers un
+				contenu externe (via une url) ou un contenu interne (via un chemin
+				d'accès).
+			</p>
+			<h2>La balise <code>&lt;a&gt;</code></h2>
+			<p>
+				La balise <code>&lt;a&gt;</code> (ancre) permet de créer des liens
+				hypertextes vers d'autres pages ou ressources. C'est un élément inline
+				qui s'utilise avec l'attribut <code>href</code> pour spécifier la
+				destination.
+			</p>
+
+			<h3>Exemple de liens</h3>
+			<pre>
+					<code>
+        &lt;p&gt;Retourner sur la &lt;a href="index.html"&gt;page d'accueil&lt;/a&gt;&lt;/p&gt;
+	&lt;p&gt;Visitez ma &lt;a href="https://www.linkedin.com/in/audren-destin/"&gt;page Linkedin&lt;/a&gt;&lt;/p&gt;
+        			</code>
+			</pre>
+			<p>
+				Quand le fichier vers lequel on veut créer un lien est dans un dossier,
+				on définit le chemin à partir de la racine du projet en utilisant le
+				caractère /
+			</p>
+			<pre>
+				<code>
+	&lt;p&gt;Découvrez &lt;a href="/pages/about.html"&gt;plus d'infos&lt;/a&gt;&lt;/p&gt;
+				</code>
+		</pre>
+			<p>
+				Si le fichier est dans un dossier parent, on utilise ../ pour sortir du
+				dossier dans lequel est la page courante suivi du nom du fichier ou du
+				dossier
+			</p>
+			<pre>
+				<code>
+	&lt;p&gt;Retourner sur la &lt;a href="../home.html"&gt;page d'accueil&lt;/a&gt;&lt;/p&gt;
+				</code>
+		</pre>
+
+			<h3>Utilisation de <code>&lt;a&gt;</code> avec des éléments block</h3>
+			<p>
+				Bien que la balise <code>&lt;a&gt;</code> soit inline par défaut, elle
+				peut contenir des éléments de type block, mais cela doit être utilisé
+				avec soin pour éviter les incohérences d'affichage :
+			</p>
+			<pre><code>
+        &lt;a href="about.html"&gt;&lt;p&gt;En savoir plus&lt;/p&gt;&lt;/a&gt;
+        </code></pre>
+
+			<h3>Liens d'ancrage</h3>
+			<p>
+				On peut créer des liens qui redirigent vers une partie de la page. Pour
+				cela il faut ajouter un id sur l'élément vers lequel on veut pointer
+			</p>
+			<pre>
+				<code>
+	&lt;h3 id="citation"&gt;Citation sur les chats&lt;/h2&gt;
+				</code>
+			</pre>
+			<p>
+				Et mettre un lien dans la page avec dans l'attribut href le symbole #
+				suivi du nom de l'id.
+			</p>
+			<pre>
+				<code>
+	&lt;a href="#citation"&gt;Voir cette fameuse citation sur les chats&lt;/a&gt;
+				</code>
+			</pre>
+
+			<h3>Envoyer un email</h3>
+			<p>
+				Le protocole mailto: indique au navigateur que le lien pointe vers une
+				adresse mail :
+			</p>
+			<pre>
+				<code>
+		&lt;p&gt;&lt;a href="mailto:bob.smith@gmail.com"&gt;M'envoyer un email&lt;/a&gt;&lt;/p&gt;
+				</code>
+			</pre>
+			<p>
+				Ce qui donne :
+				<a href="mailto:bob.smith@gmail.com">M'envoyer un email</a>
+			</p>
+
+			<h3>Rediriger vers un numéro de téléphone</h3>
+			<p>
+				On peut pointer vers un numéro de téléphone en utillisant le protocole
+				tel: dans l'attribut href (pratique quand une page est affichée sur un
+				téléphone) :
+			</p>
+			<pre>
+				<code>
+		&lt;p&gt;&lt;a href="tel:+336101010..."&gt;Me contacter par téléphone&lt;/a&gt;&lt;/p&gt;
+				</code>
+			</pre>
+			<p>
+				Ce qui donne : <a href="tel:+3361020304">Me contacter par Téléphone</a>
+			</p>
+
+			<h3>Title - Donner un titre à ses liens (accessibilté)</h3>
+			<p>
+				On peut donner un titre à tes liens avec l'attribut title. C'est une
+				excellente pratique pour l'accessibilité car cela permet de donner plus
+				de contexte aux utilisateurs de lecteurs d'écrans. L'information est
+				également visible lorsque les utilisateurs passent leurs curseurs sur le
+				lien.
+			</p>
+			<pre>
+				<code>
+		&lt;p&gt;Visiter notre &lt;a href="https://facebook.com/wildcodeschool" title="Retrouvez toute l'actualité de la Wild Code School et les derners événements sur notre page Facebook"&gt;page facebook&lt;/a&gt;&lt;/p&gt;
+				</code>
+			</pre>
+			<p>
+				Ce qui donne : Visiter notre
+				<a
+					href="https://facebook.com/wildcodeschool"
+					title="Retrouvez toute l'actualité de la Wild Code School et les derners événements sur notre page Facebook"
+					>page facebook</a
+				>
+			</p>
+
+			<h3>Target - Ouvrir le lien dans un nouvel onglet</h3>
+			<p>
+				On peut spécifier comment ouvrir un lien grâce à l'attribut target. En
+				donnant la valeur _blank, la page s'ouvrira dans un nouvel onglet.
+			</p>
+			<pre>
+				<code>
+		&lt;p&gt;Visiter &lt;a href="https://facebook.com/wildcodeschool" target="_blank"&gt;notre page facebook&lt;/a&gt;&lt;/p&gt;
+				</code>
+			</pre>
+			<p>
+				Ce qui donne : Visiter
+				<a href="https://facebook.com/wildcodeschool" target="_blank"
+					>notre page facebook</a
+				>
+			</p>
+			<h3>Download - Ressource à télécharger</h3>
+			<p>
+				Lorsque un lien contient une ressource à télécharger, on peux donner un
+				nom de fichier d'enregistrement par défaut avec l'attribut download :
+			</p>
+			<pre>
+				<code>
+		&lt;p&gt;Télécharger&lt;a href="../assets/cv.pdf" download="cv-bob-smith.pdf"&gt;Mon CV&lt;/a&gt;&lt;/p&gt;
+				</code>
+				<p>Ce qui donne : Télécharger <a href="../assets/cv.pdf" download="cv-bob-smith.pdf">Mon CV</a></p>
+			</pre>
+		</section>
+		<footer>
+			<p>Cheatsheet HTML par Audren</p>
+		</footer>
+	</body>
+</html>

@@ -6,3 +6,188 @@ Méta et autres (meta.html) :
     Balises : <meta>, <title>, <base>, <link>.
     Explication de l'utilisation des métadonnées pour le SEO, le charset, et les feuilles de style.
 -->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Explication de l'utilisation des métadonnées en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Explication de l'utilisation des métadonnées en HTML</h1>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+		</header>
+		<section>
+			<h2>Métadonnées</h2>
+			<p>
+				Les métadonnées dans une page HTML fournissent des informations
+				essentielles au navigateur, comme le type de document, la langue
+				utilisée, et l'encodage des caractères. Voici la structure de base d'une
+				page HTML :
+			</p>
+			<pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="fr"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;My super website&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p&gt;Hello World&lt;/p&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre
+			>
+			<p>Dans cette structure :</p>
+			<ul>
+				<li>
+					<strong>&lt;!DOCTYPE html&gt;</strong> : Indique que c'est un document
+					HTML.
+				</li>
+				<li>
+					<strong>&lt;html lang="fr"&gt;</strong> : Délimite le document et
+					spécifie que la langue est le français.
+				</li>
+				<li>
+					<strong>&lt;head&gt;</strong> : Contient les métadonnées, non
+					affichées sur la page.
+				</li>
+				<li>
+					<strong>&lt;meta charset="UTF-8"&gt;</strong> : Définit l'encodage des
+					caractères, essentiel pour l'affichage correct des textes.
+				</li>
+				<li>
+					<strong>&lt;title&gt;</strong> : Titre de la page, affiché dans
+					l'onglet du navigateur.
+				</li>
+				<li>
+					<strong>&lt;body&gt;</strong> : Contient le contenu visible de la page
+					web.
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Utilisation des balises <code>&lt;meta&gt;</code></h2>
+			<p>
+				La balise <code>&lt;meta&gt;</code> permet de transmettre des
+				informations pour le navigateur, améliorant ainsi l’accessibilité et le
+				référencement de la page.
+			</p>
+			<ul>
+				<li>
+					<strong>Attribut <code>charset</code></strong> : Définit le jeu de
+					caractères de la page. L’encodage <code>utf-8</code>, qui est souvent
+					utilisé par défaut, permet de gérer tous les caractères.
+				</li>
+				<li>
+					<strong>Attribut <code>name</code></strong> : Utilisé pour spécifier
+					le nom de l’auteur, une description de la page, etc., en ajoutant des
+					métadonnées utiles pour le SEO.
+					<ul>
+						<li><code>&lt;meta name="author" content="Bob Smith"&gt;</code></li>
+						<li>
+							<code
+								>&lt;meta name="description" content="Webdesigner, graphiste et
+								développeur frontend freelance, je désigne et développe des
+								applications web innovantes et créatives !"&gt;</code
+							>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Il n'y a pas de limite au nombre de balises <code>&lt;meta&gt;</code>,
+					et l’attribut <code>name</code> peut prendre plusieurs valeurs selon
+					les informations souhaitées.
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Optimisation SEO du titre</h2>
+			<p>
+				Pour améliorer le référencement, il est recommandé de respecter
+				certaines règles dans la balise <code>&lt;title&gt;</code> :
+			</p>
+			<ul>
+				<li>Limiter le titre à 60 caractères maximum.</li>
+				<li>Ne pas écrire tout en majuscules.</li>
+				<li>Avoir un titre unique pour chaque page du site.</li>
+				<li>
+					Utiliser des caractères spéciaux comme "-" ou "|" pour séparer les
+					éléments.
+				</li>
+			</ul>
+			<p>Exemples :</p>
+			<pre><code>&lt;title&gt;Découvrez mon portfolio | Webdesigner Freelance - Bob Smith&lt;/title&gt;
+		  &lt;title&gt;Our products | Delicious refreshing Juice - Minute Maid&lt;/title&gt;
+		  &lt;title&gt;Learn HTML5 | Best courses - Wild Code School&lt;/title&gt;</code></pre>
+		</section>
+
+		<section>
+			<h2>
+				La balise <code>&lt;link&gt;</code> - Lien vers des ressources externes
+			</h2>
+			<p>
+				La balise <code>&lt;link&gt;</code> doit être placée dans la section
+				<code>&lt;head&gt;</code> et permet d'ajouter des ressources externes,
+				comme des feuilles de style CSS ou une favicône.
+			</p>
+
+			<h3>1. Lier une feuille de style CSS</h3>
+			<p>
+				Pour styliser la page, la balise <code>&lt;link&gt;</code> peut lier un
+				fichier CSS :
+			</p>
+			<pre><code>
+			  &lt;link rel="stylesheet" href="styles.css" type="text/css"&gt;
+			</code></pre>
+			<p>Attributs principaux :</p>
+			<ul>
+				<li>
+					<code>rel="stylesheet"</code> : indique qu'il s'agit d'une feuille de
+					style.
+				</li>
+				<li><code>href="styles.css"</code> : lien vers le fichier CSS.</li>
+				<li>
+					<code>type="text/css"</code> : optionnel, précise le type de fichier.
+				</li>
+			</ul>
+
+			<h3>2. Ajouter une favicône</h3>
+			<p>
+				La favicône est une icône visible dans l’onglet du navigateur. Voici
+				comment l'ajouter :
+			</p>
+			<ol>
+				<li>
+					Créer une image au format <code>.ico</code> de taille
+					<strong>16x16</strong>.
+				</li>
+				<li>
+					Placer la favicône à la racine du dossier ou dans un sous-dossier.
+				</li>
+				<li>Utiliser cette balise dans le <code>&lt;head&gt;</code> :</li>
+			</ol>
+			<pre><code>
+			  &lt;link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"&gt;
+			</code></pre>
+			<p>Attributs principaux :</p>
+			<ul>
+				<li><code>rel="shortcut icon"</code> : identifie la favicône.</li>
+				<li><code>href="/favicon.ico"</code> : chemin de la favicône.</li>
+				<li>
+					<code>type="image/x-icon"</code> : type de fichier (pour une
+					compatibilité maximale).
+				</li>
+			</ul>
+		</section>
+		<footer>
+			<p>Cheatsheet HTML par Audren</p>
+		</footer>
+	</body>
+</html>
