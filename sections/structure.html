@@ -1,0 +1,121 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Structure et sémantique</h1>
+		</header>
+		<p>
+			La plupart des sites sont composés de plusieurs zones (Header, Footer,
+			etc.). Utiliser des balises sémantiques pour rendre la structure lisible
+			par des programmes est très important pour le référencement et
+			l'accessibilité.
+		</p>
+
+		<ul>
+			<!-- Balise header -->
+			<li>
+				<code>&lt;header&gt;</code> : spécifier l'en-tête d'une page, d'un
+				article, ou d'une section. On peux utiliser plusieurs
+				<code>&lt;header&gt;</code> dans une page.
+			</li>
+
+			<!-- Balise nav-->
+			<li>
+				<code>&lt;nav&gt;</code> : déclarer un élément de navigation entre les
+				différentes pages d'un site. On peut intéger la
+				<code>&lt;nav&gt;</code> dans un <code>&lt;header&gt;</code> ou la
+				placer comme un bloc indépendant. Exemple :
+				<pre><code>
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;&lt;img src="assets/logo.png" alt="Accueil" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="informations.html"&gt;S'informer&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="adoption.html"&gt;Adopter&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="blog.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="about.html"&gt;A propos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+</code></pre>
+			</li>
+
+			<!-- Balise <main> -->
+			<li>
+				<code>&lt;main&gt;</code> : pour représenter le contenu principal d'une
+				page web. Une page ne doit avoir qu'une seule balise
+				<code>&lt;main&gt;</code>.
+			</li>
+
+			<!-- Balise <article> -->
+			<li>
+				<code>&lt;article&gt;</code> : conteneur pour du contenu comme un
+				article de blog ou une fiche produit. Une page peut contenir plusieurs
+				<code>&lt;articles&gt;</code>. Chaque <code>&lt;article&gt;</code> doit
+				pouvoir être sorti de son contexte et avoir du sens seul.
+			</li>
+
+			<!-- Balise <section> -->
+			<li>
+				<code>&lt;section&gt;</code>
+				: conteneur pour du contenu thématiquement lié ou pour diviser une page
+				en sections logiques
+			</li>
+
+			<!-- Balise <aside> -->
+			<li>
+				<code>&lt;aside&gt;</code> : représente une partie d'une page, d'un
+				article ou d'une section qui donne des informations complémentaires
+				(publicités, barres de recherche, encadrés, commentaires, etc.). Une
+				page peut avoir plusieurs blocs <code>&lt;aside&gt;</code>, et chacun de
+				ces blocs peut être placé soit avant, soit après le contenu qu'il
+				complémente.
+			</li>
+			<li>
+				<code>&lt;footer&gt;</code> : utilisée pour le pied de page,
+				généralement pour des informations sur la page comme une mention de
+				copyright ou des liens vers des pages supplémentaires
+			</li>
+
+			<!-- Balise <br> -->
+			<li>
+				<code>&lt;br&gt;</code> : pour effectuer un saut de ligne
+				<strong>à l'intérieur d'un paragraphe</strong> (par exemple pour un
+				poème) ou d'une balise <code>&lt;address&gt;</code>. Pour mettre des
+				espaces entre les paragraphes, on utilisera des propriétés CSS.
+			</li>
+
+			<!-- Balise <hr> -->
+			<li>
+				<code>&lt;hr&gt;</code> : pour marquer un changement de thématique (par
+				exemple entre deux paragraphes)
+			</li>
+
+			<!-- Balises <div> -->
+			<li>
+				<code>&lt;div&gt;</code> : conteneur de type <strong>block</strong> qui
+				ne donne aucune information quant au type de contenu qu'elle contient. A
+				utiliser quand aucune balise avec une sémantique plus forte ne convient.
+			</li>
+
+			<!-- Balise <span> -->
+			<li>
+				<code>&lt;span&gt;</code> : conteneur de type
+				<strong>inline</strong> qui ne donne aucune information quant au type de
+				contenu qu'elle contient. A utiliser quand aucune balise avec une
+				sémantique plus forte ne convient.
+			</li>
+		</ul>
+
+		<footer>
+			<p>&copy; 2024 Audren</p>
+		</footer>
+	</body>
+</html>
