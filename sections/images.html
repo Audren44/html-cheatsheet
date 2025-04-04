@@ -16,54 +16,122 @@ Images (images.html) :
 	</head>
 	<body>
 		<header>
-			<h1>Ajouter des images en HTML</h1>
 			<nav>
 				<a href="../index.html">Retour à la page d'accueil</a>
 			</nav>
+			<h1>Ajouter des images en HTML</h1>
 		</header>
+		<ul>
+			<!-- Balise <img />-->
+			<li>
+				<code>&lt;img /&gt;</code> : balise auto-fermante utilisée pour afficher
+				une image. Elle nécessite au minimum un attribut <code>src</code>. Il
+				existe également de nombreux attributs optionnels.
+			</li>
 
-		<section>
-			<h2>Utiliser la balise <code>&lt;img /&gt;</code></h2>
-			<p>
-				La balise <code>&lt;img /&gt;</code> est utilisée pour afficher une
-				image dans une page HTML. Elle est auto-fermante et nécessite au minimum
-				un attribut <code>src</code> pour spécifier l'URL de l'image.
-			</p>
-			<p>Exemple :</p>
-			<pre>
-&lt;img src="https://pixabay.com/fr/images/download/raccoon-8504925_640.png" /&gt;
-			</pre
-			>
-		</section>
+			<!-- Attribut src -->
+			<li>
+				<code>src</code> : attribut utilisé pour spécifier l'URL de l'image.
+				L'URL peut être absolue (adresse https) ou relative avec
+				<code>/</code>ou <code>./</code>
+			</li>
 
-		<section>
-			<h2>Attributs optionnels</h2>
-			<p>
-				En plus de <code>src</code>, d'autres attributs peuvent être utilisés
-				avec la balise <code>&lt;img /&gt;</code> :
-			</p>
-			<ul>
-				<li>
-					<code>alt</code> : Donne une description alternative de l'image pour
-					les utilisateurs malvoyants ou lorsque l'image ne peut pas être
-					chargée.
-				</li>
-				<li>
-					<code>width</code> : spécifie la largeur de l’image en pixels. La
-					hauteur s’ajuste en fonction.
-				</li>
-			</ul>
-			<p>Exemple :</p>
-			<pre>
+			<!-- Attribut alt -->
+			<li>
+				<code>alt</code> : attribut optionnel qui donne une description
+				alternative de l'image pour les utilisateurs malvoyants ou lorsque
+				l'image ne peut pas être chargée. Le texte aletrnatif doit être
+				spécifique et clair. Par exemple : "Le Machu Picchu au Pérou au lever du
+				soleil". On évite les texte commençant par "photo" ou "image" (les
+				logiciels le savent déjà).
+			</li>
+
+			<!-- Attribut width -->
+			<li>
+				<code>width</code> : spécifie la largeur de l’image en pixels. La
+				hauteur s’ajuste en fonction. Si on ne respecte pas le ration d'origine,
+				l'image sera déformée.
+			</li>
+
+			<!-- Attribut height -->
+			<li>
+				<code>height</code> : spécifie la hauteur de l’image en pixels. La
+				largeur s’ajuste en fonction. Attention aux images trop lourdes, le
+				navigateur charge l'image entière avant de la redimmensionner.
+			</li>
+		</ul>
+
+		<!-- Exemple d'une balise <img /> avec des attributs optionnels -->
+		<p>Exemple :</p>
+		<pre>
+			<code>
 &lt;img src="https://pixabay.com/fr/images/download/raccoon-8504925_640.png" 
      alt="Un raton laveur mignon sort la tête d'une poubelle les yeux écarquillés"
      width="300" /&gt;
-			</pre
-			>
-		</section>
+		</code>
+	</pre>
+
+		<!-- Balises <figure> <figcaption> -->
+
+		<ul>
+			<li>
+				<code>&lt;figure&gt;</code> : utilisée pour regrouper un contenu
+				multimédia (comme une image, une vidéo ou un graphique) et une légende
+				qui le décrit, souvent grâce à une balise
+				<code>&lt;figcaption&gt;</code>. Bonne base pour créer une "card" en
+				HTML.
+			</li>
+			<li>
+				<code>&lt;figcaption&gt;</code> : permet d'ajouter une légende à un
+				contenu (dans la balise <code>&lt;figure&gt;</code>).
+			</li>
+		</ul>
+
+		<!-- Exemple d'une <figure> et <figcaption> -->
+		<p>Exemple :</p>
+		<pre>
+				<code>
+	&lt;figure&gt;
+	  &lt;img src="img_graphique_cat_speed.jpg" 
+	       alt="Rapidité des chats comparée à celle d'autres animaux" /&gt;
+	  &lt;figcaption&gt;Représentation de la rapidité des chats comparée à celle d'autres animaux.&lt;/figcaption&gt;
+	&lt;/figure&gt;
+			</code>
+		</pre>
+
+		<!-- Balise <svg> images vectorielles -->
+
+		<ul>
+			<li>
+				<code>&lt;svg&gt;</code> : pour intégrer des images vectorielles (format
+				vectoriel permet d'afficher une illustration sous forme de vecteurs
+				plutôt que de pixels). Avantages : poids plus léger et qualité parfaite
+				quelle que soit la résolution (agransissable à l'infini sans perte de
+				qualité). Les images vectorielles sont souvent utilisées pour les
+				icones, dessins, picto, logos, etc. On peut utiliser un fichier svg dans
+				une balise <code>&lt;img /&gt;</code> mais on peut aussi intégrer
+				directement du code svg avec une balise <code>&lt;svg&gt;</code>.
+			</li>
+		</ul>
+
+		<!-- Exemple d'une balise <svg> -->
+		<p>Exemple :</p>
+		<pre>
+					<code>
+		&lt;svg width="300" height="200"&gt;
+		  &lt;rect width="100%" height="100%" fill="blue" /&gt;
+		&lt;/svg&gt;
+				</code>
+			</pre>
+
+		<p>Ce qui donnera comme résultat l'image suivante :</p>
+
+		<svg width="300" height="200">
+			<rect width="100%" height="100%" fill="blue" />
+		</svg>
 
 		<footer>
-			<p>Cheatsheet HTML par Audren</p>
+			<p>&copy; 2024 Audren</p>
 		</footer>
 	</body>
 </html>

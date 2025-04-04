@@ -1,0 +1,194 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ajouter des fichiers video en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+			<h1>Ajouter des vidéos</h1>
+		</header>
+		<ul>
+			<!-- Balise <video> -->
+			<li>
+				<code>&lt;video&gt;</code> : balise utilisée pour ajouter un fichier
+				vidéo sur une page web. Pour des raisons d'accessibilité, il faut
+				toujours laisser la possibilité aux utilisateurs de démarrer/arrêter la
+				vidéo et d'augmenter ou baisser le volume. On peut spécifier un texte à
+				l'intérieur de la balise qui sera visible si le navigateur ne supporte
+				pas l'élément <code>&lt;vidéo&gt;</code>. On peut trouver pleins de
+				vidéos gratuites et libres de droits sur le site de
+				<a href="https://www.pexels.com/search/videos/cat/">pexels.</a>
+			</li>
+
+			<!-- Atrribut src -->
+			<li>
+				<code>src</code> : <strong>attribut</strong> pour spécifier la source de
+				la vidéo.
+			</li>
+
+			<!-- Attribut controls -->
+			<li>
+				<code>controls</code> : <strong>attribut</strong> (booléen) pour
+				afficher (ou pas) le panneau de contrôle du lecteur vidéo.
+			</li>
+
+			<!-- Attribut autoplay -->
+
+			<li>
+				<code>autoplay</code> : <strong>attribut</strong> (booléen) jouera
+				automatiquement la vidéo (déconseillé pour ne pas déranger les
+				utilisateurs).
+			</li>
+
+			<!-- Attribut loop -->
+
+			<li>
+				<code>loop</code> : <strong>attribut</strong> (booléen) qui permet de
+				lancer la vidéo en boucle : lorsque la vidéo est terminée, la lecture
+				reprendra depuis le début.
+			</li>
+
+			<!-- Attribut muted-->
+
+			<li>
+				<code>muted</code> : <strong>attribut</strong> (booléen) qui permet de
+				couper le son par défaut.
+			</li>
+
+			<!-- Attribut poster-->
+
+			<li><code>poster</code> : <strong>lien vers une image</strong></li>
+			qui permet de définir une image affichée avant la lecture de la vidéo.
+
+			<!-- Attribut width et height-->
+
+			<li>
+				<code>width et height</code> :
+				<strong>nombre de pixels</strong> permettent de définir la taille de la
+				vidéo.
+			</li>
+		</ul>
+
+		<!-- Exemple d'une balise <video> avec des attributs optionnels -->
+		<p>Exemple d'une balise video avec des attributs optionnels :</p>
+
+		<pre>
+			<code>
+	&lt;video src="cats.mp4" controls autoplay loop muted poster="cats_video_poster.png" width="300"&gt;
+	   &lt;p&gt;Impossible de jouer la vidéo. Vous pouvez &lt;a href="cats.mp4"&gt;télécharger la vidéo&lt;/a&gt; afin de la visionner.
+	   &lt;/p&gt;
+	&lt;/video&gt;
+
+			</code>
+		</pre>
+
+		<!-- Balise <track> pour ajouter du texte dans les vidéos -->
+
+		<ul>
+			<li>
+				<code>&lt;track&gt;</code> : balise pour ajouter du texte dans les
+				vidéos.
+			</li>
+
+			<!-- Attribut subtitles -->
+			<li>
+				<code>kind="subtitles"</code> : <strong>attribut</strong> pour ajouter
+				des sous-titres.
+			</li>
+
+			<!-- Attribut captions -->
+			<li>
+				<code>kind="captions"</code> : <strong>attribut</strong> pour ajouter
+				des légendes.
+			</li>
+
+			<!-- Attribut descriptions -->
+			<li>
+				<code>kind="descriptions"</code> : <strong>attribut</strong> pour
+				ajouter des descriptions.
+			</li>
+
+			<!-- Attribut default -->
+			<li>
+				<code>default</code> : <strong>attribut</strong> qui force l’affichage
+				des sous-titres dès que la vidéo est lue (certains navigateurs
+				n’affichent pas les sous-titres sans l'attribut default.)
+			</li>
+		</ul>
+
+		<!-- Exemple d'une balise <track> inserée dans une balise <video> -->
+
+		<p>
+			Exemple d'une balise <code>&lt;track&gt;</code> inserée dans une balise
+			<code>&lt;video&gt;</code> :
+		</p>
+
+		<pre>
+			<code>
+	&lt;video src="cats.mp4" controls autoplay loop muted poster="cats_video_poster.png" width="300"&gt;
+	&lt;track kind="captions" src="/assets/subtitles/my_captions.vtt" srclang="fr" default /&gt;
+	   &lt;p&gt;Impossible de jouer la vidéo. Vous pouvez &lt;a href="cats.mp4"&gt;télécharger la vidéo&lt;/a&gt; afin de la visionner.
+	   &lt;/p&gt;
+	&lt;/video&gt;
+			</code>
+		</pre>
+
+		<ul>
+			<li>
+				<code>fichier WebVTT</code> : le texte dans les vidéos est ajouté à
+				l'aide d'un fichier WebVTT : c'est un fichier avec l'extension .vtt qui
+				contient les textes associés à un minutage. Il existe des programmes qui
+				permettent de créer facilement des fichier VTT, comme
+				<a href="https://www.vtt-creator.com/editor">vtt-creator</a> par
+				exemple. Ce fichier doit avoir une structure précise.
+			</li>
+		</ul>
+
+		<p>Exemple d'un fichier <code>.vtt</code> :</p>
+
+		<pre>
+			<code>
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+Je suis le roi de la jungle
+
+00:00:03.000 --> 00:00:06.000
+Je suis un killer
+			</code>
+		</pre>
+
+		<video
+			src="/assets/videos/chat-qui-dort.mp4"
+			controls
+			autoplay
+			loop
+			muted
+			poster="cats_video_poster.png"
+			width="200"
+		>
+			<track
+				kind="captions"
+				src="/assets/subtitles/my_captions.vtt"
+				srclang="fr"
+				default
+			/>
+			<p>
+				Impossible de jouer la vidéo. Vous pouvez
+				<a href="cats.mp4">télécharger la vidéo</a> afin de la visionner.
+			</p>
+		</video>
+
+		<footer>
+			<p>&copy; 2024 Audren</p>
+		</footer>
+	</body>
+</html>

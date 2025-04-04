@@ -1,0 +1,69 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ajouter des fichiers audio en HTML</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+			<h1>Ajouter des fichiers audio</h1>
+		</header>
+		<ul>
+			<li>
+				<code>&lt;audio&gt;</code> : balise utilisée pour ajouter un fichier
+				audio.
+			</li>
+			<!-- Atrribut src -->
+			<li>
+				<code>src</code> : <strong>attribut</strong> pour spécifier la source du
+				fichier audio.
+			</li>
+
+			<!-- Attribut controls -->
+			<li>
+				<code>controls</code> : <strong>attribut</strong> (booléen) pour
+				afficher (ou pas) le panneau de contrôle du lecteur audio.
+			</li>
+
+			<!-- Attribut autoplay -->
+
+			<li>
+				<code>autoplay</code> : <strong>attribut</strong> (booléen) jouera
+				automatiquement le fichier audio (déconseillé pour ne pas déranger les
+				utilisateurs).
+			</li>
+
+			<!-- Attribut loop -->
+
+			<li>
+				<code>loop</code> : <strong>attribut</strong> (booléen) qui permet de
+				lancer le fichier audio en boucle : lorsque le fichier audio est
+				terminée, la lecture reprendra depuis le début.
+			</li>
+		</ul>
+
+		<!-- Exemple d'une balise <audio> avec des attributs optionnels -->
+		<p>Exemple d'une balise audio avec des attributs optionnels :</p>
+
+		<pre>
+			<code>
+	&lt;audio src="miaou.mp3" controls autoplay loop&gt;
+	   &lt;p&gt;Votre navigateur ne prend pas en charge l'audio. Vous pouvez &lt;a href="miaou.mp3"&gt;télécharger l'audio&lt;/a&gt; afin d'écouter l'extrait.
+	   &lt;/p&gt;
+	&lt;/audio&gt;
+
+			</code>
+		</pre>
+
+		<footer>
+			<p>&copy; 2024 Audren</p>
+		</footer>
+	</body>
+</html>

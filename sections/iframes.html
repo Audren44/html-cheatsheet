@@ -1,0 +1,71 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>iframes - intégrer des pages web dans des pages web</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html">Retour à la page d'accueil</a>
+			</nav>
+			<h1>Intégrer des pages web dans des pages web</h1>
+		</header>
+		<ul>
+			<li>
+				<code>&lt;iframe&gt;</code> : éléments qui permettent d'intégrer des
+				pages web à l'intérieur de pages web (vidéos youtube, bloc de code sur
+				Codesandbox, etc.). La plupart des sites internet peuvent être affichés
+				dans un iframe, par exemple le site wikipedia. On peut donner un texte
+				dans le cas ou le navigateur ne peut afficher l'iframe. Attention
+				attention à l'aspect sécurité en s'assurant que le site proposé en
+				iframe est sécurisé.
+			</li>
+			<li>
+				<code>src</code> : <strong>attribut</strong> pour spécifier la source de
+				la vidéo.
+			</li>
+			<li>
+				<code>width et height</code> : attributs pour définir la largeur et la
+				hauteur de l'iframe.
+			</li>
+			<li>
+				<code>sandbox</code> : <strong>attribut</strong> qui d'améliorer la
+				sécurité en interdisant à l'iframe d’exécuter des scripts JS ou de
+				soumettre des formulaires.
+			</li>
+		</ul>
+
+		<p>Exemple :</p>
+
+		<pre>
+            <code>
+    &lt;iframe width="640" height="360"
+      src="http://www.youtube.com/embed/gYeG-TLImlw?autoplay=1"&gt;
+         &lt;p&gt;Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter 
+         la page pour &lt;a href="http://www.youtube.com/embed/gYeG-TLImlw?autoplay=1"&gt;visualiser 
+         la vidéo&lt;/a&gt;.&lt;/p&gt;
+    &lt;/iframe&gt;
+            </code>
+        </pre>
+
+		<iframe
+			width="640"
+			height="360"
+			src="http://www.youtube.com/embed/gYeG-TLImlw?autoplay=1"
+			frameborder="0"
+		>
+			<p>
+				Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter
+				la page pour
+				<a href="http://www.youtube.com/embed/gYeG-TLImlw?autoplay=1"
+					>visualiser la vidéo</a
+				>.
+			</p>
+		</iframe>
+	</body>
+</html>

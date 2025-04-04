@@ -16,35 +16,288 @@ Formulaires (forms.html) :
 	</head>
 	<body>
 		<header>
-			<h1>Créer des formulaires en HTML</h1>
 			<nav>
 				<a href="../index.html">Retour à la page d'accueil</a>
 			</nav>
+			<h1>Créer des formulaires</h1>
 		</header>
 
+		<p>
+			Un formulaire HTML permet de récolter des informations de la part d'un
+			utilisateur afin qu'il puisse envoyer des données/interagir avec le site
+			web.
+		</p>
+
+		<ul>
+			<!-- balise <form> -->
+
+			<li>
+				<code>&lt;form&gt;</code> : balise par laquelle on commence pour
+				déclarer un formulaire. C'est le conteneur dans lequel on va ajouter les
+				différentes composantes du formulaire. <code>&lt;form&gt;</code> est
+				généralement utilisé avec les attributs <code>action</code> et
+				<code>method</code>.
+			</li>
+
+			<li>
+				<code>action</code> : <strong>attribut</strong> qui définit l'url où
+				doivent être envoyées les données. Sans serveur pour envoyer les
+				données, on laisse cet attribut vide.
+			</li>
+
+			<li>
+				<code>method</code> : <strong>attribut</strong> qui définit la méthode
+				utilisée pour envoyer le formulaire ("get" ou "post"). Sans serveur pour
+				envoyer les données, on laisse cet attribut vide.
+			</li>
+		</ul>
+
+		<p>Exemple :</p>
+
+		<pre>
+			<code>
+	&lt;form action="/adoption-demand" method="post"&gt;
+	&lt;/form&gt;
+			</code>
+		</pre>
+
+		<!-- balise <input> -->
+
+		<ul>
+			<li>
+				<code>&lt;input&gt;</code>
+				: pour ajouter un champ de saisie dans un formulaire. Cette balise
+				permet de créer différents types de champs en spécifiant la nature de
+				ceux-ci avec l'attribut
+				<code>type</code>.
+			</li>
+
+			<!-- Attribut type -->
+
+			<li>
+				<code>type</code> : <strong>attribut</strong> qui permet de spécifier la
+				nature du champs dans la balise input. Exemple :
+				<code>type="text"</code> pour un champs texte.
+			</li>
+
+			<!-- balise <label> -->
+
+			<li>
+				<code>&lt;label&gt;</code> : permet de préciser à quoi sert un élément
+				du formulaire. Pour des raisons d'accessibilité, on ajoute une
+				"étiquette" sur chacun des éléments d'un formulaire.
+			</li>
+			<li>
+				<code>for</code> : <strong>attribut</strong> dans la balise
+				<code>&lt;label&gt;</code> qui doit correspondre à l'attribut
+				<code>id</code> de l'élément <code>&lt;input&gt;</code> afin de lier les
+				deux.
+			</li>
+			<li>required</li>
+			:
+			<strong>attribut</strong>
+			pour indiquer au navigateur que le champ doit être rempli.
+		</ul>
+
+		<p>Exemple :</p>
+		<pre>
+			<code>
+	&lt;form&gt;
+	  &lt;label for="firstname"&gt;What's your firstname ?&lt;/label&gt;
+	  &lt;input type="text" id="firstname"&gt;
+	&lt;/form&gt;
+			</code>
+		</pre>
+
+		<p>ou :</p>
+
+		<pre>
+			<code>
+      &lt;form&gt;
+	&lt;label&gt;What's your firstname ?
+	  &lt;input type="text"&gt;
+	&lt;/label&gt;
+      &lt;/form&gt;
+			</code>
+		</pre>
+
+		<!-- Fichier contact -->
+
+		<h2>Me contacter</h2>
+
+		<form>
+			<label for="secondname"> Quel est ton nom ? <input type="text" /> </label>
+		</form>
+
+		<!-- balise <button> -->
+
+		<ul>
+			<li>
+				<code>&lt;button&gt;</code> : balise utilisée pour créer des boutons.
+			</li>
+
+			<!-- attribut disabled -->
+
+			<li>
+				<code>disabled</code> : <strong>attribut</strong> utilisé pour
+				désactiver un bouton. On peut l'utiliser avec une valeur booléenne :
+				<code>&lt;button disabled="true"&gt;Clique&lt;/button&gt;</code>. Mais
+				il est possible de raccourcir en utilisant l'attribut sans aucune valeur
+				: <code>&lt;button disabled&gt;Clique&lt;/button&gt;</code>.
+			</li>
+		</ul>
+
+		<p>
+			Les formulaires HTML permettent aux utilisateurs d'envoyer des
+			informations à un site web. Voici un récapitulatif des balises, attributs
+			et bonnes pratiques essentiels.
+		</p>
+
 		<section>
-			<h2>Les Boutons</h2>
-			<p>
-				Les boutons sont créés avec la balise <code>&lt;button&gt;</code>.
-				L'attribut <code>disabled</code> peut être utilisé pour désactiver un
-				bouton.
-			</p>
-			<p>On peut utiliser l'attribut avec une valeur booléenne :</p>
+			<h2>1. La balise <code>&lt;form&gt;</code></h2>
+			<ul>
+				<li>
+					<strong>Description :</strong> Conteneur principal pour créer un
+					formulaire.
+				</li>
+				<li>
+					<strong>Attributs principaux :</strong>
+					<ul>
+						<li>
+							<code>action</code> : URL où les données doivent être envoyées.
+						</li>
+						<li>
+							<code>method</code> : Méthode d’envoi (<code>get</code> ou
+							<code>post</code>).
+						</li>
+					</ul>
+				</li>
+			</ul>
 			<pre>
-                &lt;button disabled="true"&gt;Clique&lt;/button&gt;
-            </pre
-			>
-			<p>
-				Cependant, il est possible de raccourcir en utilisant l'attribut sans
-				aucune valeur :
-			</p>
-			<pre>
-                &lt;button disabled&gt;Clique&lt;/button&gt;
-            </pre
-			>
+		<code>&lt;form action="/submit-form" method="post"&gt;
+		  <!-- Contenu du formulaire -->
+		&lt;/form&gt;</code>
+			</pre>
 		</section>
+
+		<section>
+			<h2>2. Les champs de saisie (<code>&lt;input&gt;</code>)</h2>
+			<ul>
+				<li>
+					<strong>Attributs principaux :</strong>
+					<ul>
+						<li>
+							<code>type</code> : Définit le type de champ (<code>text</code>,
+							<code>email</code>, <code>password</code>, etc.).
+						</li>
+						<li>
+							<code>name</code> : Nom du champ, utilisé pour identifier les
+							données côté serveur.
+						</li>
+						<li><code>placeholder</code> : Texte indicatif dans le champ.</li>
+						<li><code>required</code> : Rend le champ obligatoire.</li>
+						<li>
+							<code>maxlength</code>, <code>min</code>, <code>max</code>,
+							<code>pattern</code> : Restrictions sur les données saisies.
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;input type="text" name="username" placeholder="Entrez votre nom" required maxlength="20" /&gt;</code>
+			</pre>
+		</section>
+
+		<section>
+			<h2>3. Associer un label à un champ</h2>
+			<ul>
+				<li><strong>Balise :</strong> <code>&lt;label&gt;</code></li>
+				<li>
+					<strong>Bonne pratique :</strong> Utiliser l’attribut
+					<code>for</code> pour lier un <code>&lt;label&gt;</code> à un champ
+					via son <code>id</code>.
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;label for="email"&gt;Adresse e-mail :&lt;/label&gt;
+		&lt;input type="email" id="email" name="email" required /&gt;</code>
+			</pre>
+		</section>
+
+		<section>
+			<h2>4. Les menus déroulants (<code>&lt;select&gt;</code>)</h2>
+			<ul>
+				<li>
+					<strong>Description :</strong> Permet à l'utilisateur de sélectionner
+					une option parmi plusieurs.
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;label for="country"&gt;Choisissez un pays :&lt;/label&gt;
+		&lt;select id="country" name="country"&gt;
+		  &lt;option value="france"&gt;France&lt;/option&gt;
+		  &lt;option value="usa"&gt;États-Unis&lt;/option&gt;
+		&lt;/select&gt;</code>
+			</pre>
+		</section>
+
+		<section>
+			<h2>5. Zone de texte longue (<code>&lt;textarea&gt;</code>)</h2>
+			<ul>
+				<li>
+					<strong>Description :</strong> Permet la saisie de plusieurs lignes de
+					texte.
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;label for="message"&gt;Votre message :&lt;/label&gt;
+		&lt;textarea id="message" name="message" rows="5" cols="30" placeholder="Écrivez ici..."&gt;&lt;/textarea&gt;</code>
+			</pre>
+		</section>
+
+		<section>
+			<h2>6. Boutons (<code>&lt;button&gt;</code>)</h2>
+			<ul>
+				<li>
+					<strong>Description :</strong> Utilisé pour soumettre un formulaire ou
+					déclencher une action.
+				</li>
+				<li>
+					<strong>Types :</strong>
+					<ul>
+						<li><code>submit</code> : Envoie le formulaire.</li>
+						<li><code>reset</code> : Réinitialise les champs.</li>
+						<li><code>button</code> : Bouton sans comportement par défaut.</li>
+					</ul>
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;button type="submit"&gt;Envoyer&lt;/button&gt;</code>
+			</pre>
+		</section>
+
+		<section>
+			<h2>
+				7. Groupement d'éléments (<code>&lt;fieldset&gt;</code> et
+				<code>&lt;legend&gt;</code>)
+			</h2>
+			<ul>
+				<li>
+					<strong>Description :</strong> Utilisé pour regrouper des champs liés,
+					avec une légende.
+				</li>
+			</ul>
+			<pre>
+		<code>&lt;fieldset&gt;
+		  &lt;legend&gt;Informations personnelles&lt;/legend&gt;
+		  &lt;label for="name"&gt;Nom :&lt;/label&gt;
+		  &lt;input type="text" id="name" name="name" required /&gt;
+		&lt;/fieldset&gt;</code>
+			</pre>
+		</section>
+
 		<footer>
-			<p>Cheatsheet HTML par Audren</p>
+			<p>&copy; 2024 Audren</p>
 		</footer>
 	</body>
 </html>
