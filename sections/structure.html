@@ -16,12 +16,13 @@
 			<h1>Structurer une page HTML</h1>
 		</header>
 
+		<!-- Introduction -->
+
 		<p>
-			HTML est un langage de balisage utilisé pour structurer le contenu d'une
-			page web. Une page web est composée de plusieurs zones (Header, Footer,
-			etc.). L'utilisation de balises facilite la compréhension de la page par
-			les moteurs de recherche (référencement) et les technologies d'assistance
-			(accessibilité).
+			HTML structure le contenu d’une page web à l’aide de balises. Une page web
+			est souvent divisée en zones : <code>&lt;header&gt;</code>,
+			<code>&lt;footer&gt;</code>, etc. Les balises aident au référencement
+			(SEO) et à l’accessibilité.
 		</p>
 
 		<section>
@@ -30,17 +31,14 @@
 			<ul>
 				<!-- Balise header -->
 				<li>
-					<code>&lt;header&gt;</code> : spécifier l'en-tête d'une page, d'un
-					article, ou d'une section. On peux utiliser plusieurs
-					<code>&lt;header&gt;</code> dans une page.
+					<code>&lt;header&gt;</code> : en-tête d'une page, section ou article.
+					Plusieurs <code>&lt;header&gt;</code> possibles par page.
 				</li>
 
 				<!-- Balise nav-->
 				<li>
-					<code>&lt;nav&gt;</code> : déclarer un élément de navigation entre les
-					différentes pages d'un site. On peut intéger la
-					<code>&lt;nav&gt;</code> dans un <code>&lt;header&gt;</code> ou la
-					placer comme un bloc indépendant. Exemple :
+					<code>&lt;nav&gt;</code> : navigation entre les pages du site. Peut
+					être dans un <code>&lt;header&gt;</code> ou autonome. Exemple :
 					<pre><code>
     &lt;nav&gt;
         &lt;ul&gt;
@@ -57,101 +55,123 @@
 
 				<!-- Balise <main> -->
 				<li>
-					<code>&lt;main&gt;</code> : pour représenter le contenu principal
-					d'une page web. Une page ne doit avoir qu'une seule balise
-					<code>&lt;main&gt;</code>.
+					<code>&lt;main&gt;</code> : contenu principal de la page. Un seul
+					<code>&lt;main&gt;</code> par page.
 				</li>
 
 				<!-- Balise <article> -->
 				<li>
-					<code>&lt;article&gt;</code> : conteneur pour du contenu comme un
-					article de blog ou une fiche produit. Une page peut contenir plusieurs
-					<code>&lt;articles&gt;</code>. Chaque
-					<code>&lt;article&gt;</code> doit pouvoir être sorti de son contexte
-					et avoir du sens seul.
+					<code>&lt;article&gt;</code> : bloc autonome (blog, fiche produit…).
+					Doit avoir du sens seul.
 				</li>
 
 				<!-- Balise <section> -->
 				<li>
 					<code>&lt;section&gt;</code>
-					: conteneur pour du contenu thématiquement lié ou pour diviser une
-					page en sections logiques
+					: regroupe un contenu lié ou divise la page en blocs logiques.
 				</li>
 
 				<!-- Balise <aside> -->
 				<li>
-					<code>&lt;aside&gt;</code> : représente une partie d'une page, d'un
-					article ou d'une section qui donne des informations complémentaires
-					(publicités, barres de recherche, encadrés, commentaires, etc.). Une
-					page peut avoir plusieurs blocs <code>&lt;aside&gt;</code>, et chacun
-					de ces blocs peut être placé soit avant, soit après le contenu qu'il
-					complémente.
-				</li>
-				<li>
-					<code>&lt;footer&gt;</code> : utilisée pour le pied de page,
-					généralement pour des informations sur la page comme une mention de
-					copyright ou des liens vers des pages supplémentaires
+					<code>&lt;aside&gt;</code> : contenu complémentaire (pub, encadré,
+					barre de recherche, etc.). Chacun de ces blocs peut être placé soit
+					avant, soit après le contenu qu'il complémente.
 				</li>
 
-				<!-- Balises <div> -->
+				<!-- balise <footer> -->
+				<li>
+					<code>&lt;footer&gt;</code> : pied de page. Souvent pour des infos
+					légales ou des liens complémentaires.
+				</li>
+
+				<!-- balise <div> -->
 				<li>
 					<code>&lt;div&gt;</code> : conteneur de type
-					<strong>block</strong> qui ne donne aucune information quant au type
-					de contenu qu'elle contient. A utiliser quand aucune balise avec une
-					sémantique plus forte ne convient.
+					<strong>block</strong> sans signification sémantique. A utiliser quand
+					aucune balise avec une sémantique plus forte ne convient.
 				</li>
 
 				<!-- Balise <span> -->
 				<li>
 					<code>&lt;span&gt;</code> : conteneur de type
-					<strong>inline</strong> qui ne donne aucune information quant au type
-					de contenu qu'elle contient. A utiliser quand aucune balise avec une
-					sémantique plus forte ne convient.
+					<strong>inline</strong> sans significationt. A utiliser quand aucune
+					balise avec une sémantique plus forte ne convient.
 				</li>
 			</ul>
 		</section>
 
 		<section>
 			<h2>La mise en forme du texte</h2>
+
 			<!-- La mise en forme du texte -->
+
 			<ul>
+				<!-- balise <p> -->
 				<li>
-					<code>&lt;p&gt;</code> : pour structurer le texte en blocs lisibles.
+					<code>&lt;p&gt;</code> : paragraphe. Structure le texte en blocs
+					lisibles.
 				</li>
 
+				<!-- balises <b>, <i>, <u> -->
 				<li>
-					<code>&lt;strong&gt;</code> : utilisée pour indiquer qu'un texte est
-					important. Par défaut, cela rend le texte en gras.
+					<code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>,
+					<code>&lt;u&gt;</code> : mises en forme visuelles (gras, italique,
+					souligné), sans valeur sémantique. À éviter pour l’accessibilité et le
+					SEO.
 				</li>
 
-				<li>
-					<code>&lt;!-- --&gt;</code> : ajouter un commentaire. Les commentaires
-					ne sont pas affichés dans le navigateur, mais ils aident à documenter
-					le code.
-				</li>
+				<!-- balise <strong> -->
+
+				<li><code>&lt;strong&gt;</code> : texte important. Rendu en gras.</li>
+
+				<!-- balise <em> -->
+
+				<li><code>&lt;em&gt;</code> : emphase. Rendu en italique.</li>
+
+				<!-- balise <mark> -->
+				<li><code>&lt;mark&gt;</code> : mise en évidence d'un texte.</li>
+
+				<!-- documenter du code -->
 
 				<li>
-					<code>&lt;em&gt;</code> : pour afficher un texte en italique et le
-					lire comme un élément remarquable (emphase).
+					<code>&lt;!-- --&gt;</code> : commentaire dans le code. Non visible
+					dans le navigateur.
 				</li>
+
 				<!-- Balise <br> -->
 				<li>
-					<code>&lt;br&gt;</code> : pour effectuer un saut de ligne
-					<strong>à l'intérieur d'un paragraphe</strong> (par exemple pour un
-					poème) ou d'une balise <code>&lt;address&gt;</code>. Pour mettre des
-					espaces entre les paragraphes, on utilisera des propriétés CSS.
+					<code>&lt;br&gt;</code> : saut de ligne. À utiliser dans un poème ou
+					une adresse, pas pour espacer les paragraphes (utiliser CSS).
 				</li>
 
 				<!-- Balise <hr> -->
 				<li>
-					<code>&lt;hr&gt;</code> : pour marquer un changement de thématique
-					(par exemple entre deux paragraphes)
+					<code>&lt;hr&gt;</code> : séparation thématique (ex : entre deux
+					paragraphes)
 				</li>
+
+				<!-- balise <abbr> -->
+				<li>
+					<code>&lt;abbr&gt;</code> : abbréviation. Permet de voir le texte
+					complet de l'abréviation en survolant avec la souris. Améliore
+					l'accessibilité et le référencement. Exemple : site réalisé en
+					<abbr title="HyperText Markup Language">HTML</abbr>,
+					<abbr title="Cascading Style Sheets">CSS</abbr> et
+					<abbr title="JavaScript">JS</abbr>.
+				</li>
+				<pre><code>
+	&lt;p&gt;
+	  Site réalisé en &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;,
+	  &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; et
+	  &lt;abbr title="JavaScript"&gt;JS&lt;/abbr&gt;.
+	&lt;/p&gt;
+		</code>
+		</pre>
 			</ul>
 		</section>
 
 		<footer>
-			<p>&copy; 2024 Audren</p>
+			<p>&copy; 2025 Audren</p>
 		</footer>
 	</body>
 </html>
