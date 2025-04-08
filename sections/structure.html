@@ -106,10 +106,35 @@
 			<!-- La mise en forme du texte -->
 
 			<ul>
+				<!-- balise <h1> à <h6> -->
+				<li>
+					<code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> : titres. Du plus
+					important au moins important. Un seul <code>&lt;h1&gt;</code> par
+					page.
+				</li>
+
 				<!-- balise <p> -->
 				<li>
 					<code>&lt;p&gt;</code> : paragraphe. Structure le texte en blocs
 					lisibles.
+				</li>
+
+				<!-- balises <ul> et <ol> -->
+
+				<li>
+					<code>&lt;ul&gt;</code> : liste non ordonnée. Utilise des puces pour
+					chaque élément avec <code>&lt;li&gt;</code>. Exemple :
+					<pre><code>
+	&lt;ul&gt;
+	  &lt;li&gt;Savoir où jeter ses déchets&lt;/li&gt;
+	  &lt;li&gt;Partager son savoir autour de soi&lt;/li&gt;
+	  &lt;li&gt;Réduire ses déchets&lt;/li&gt;
+	&lt;/ul&gt;
+							</code></pre>
+				</li>
+				<li>
+					<code>&lt;ol&gt;</code> : liste ordonnée. Numérote automatiquement
+					chaque élément.
 				</li>
 
 				<!-- balises <b>, <i>, <u> -->
@@ -167,6 +192,49 @@
 	&lt;/p&gt;
 		</code>
 		</pre>
+
+				<!-- balise <pre> et <code> -->
+				<li>
+					<code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code> : bloc de code.
+					<code>&lt;code&gt;</code> est utilisée pour le code en ligne, tandis
+					que <code>&lt;pre&gt;</code> conserve la mise en forme (espaces, sauts
+					de ligne, etc.) d'un bloc de code entier.
+					<strong>Attention :</strong> Si on essaie d'écrire du code HTML dans
+					un document HTML, le navigateur va l'interpréter comme du code HTML.
+					Pour éviter cela, on remplace : & par <code>&amp;amp;</code>, &lt; par
+					<code>&amp;lt;</code>, &gt; par <code>&amp;gt;</code>, " par
+					<code>&amp;quot;</code>.
+				</li>
+
+				<p>Exemple, pour obtenir ce bloc :</p>
+				<pre>
+		<code>
+	&lt;pre&gt;
+	  &lt;code&gt;
+	    &lt;h1&gt;Hello, world&lt;/h1&gt;
+	    &lt;h2&gt;Welcome to my Website&lt;/h2&gt;
+	  &lt;/code&gt;
+	&lt;/pre&gt;
+		</code>
+	</pre>
+				<p>J'ai dû écrire dans mon éditeur :</p>
+				<pre>
+		<code>
+	&amp;lt;pre&amp;gt;
+	  &amp;lt;code&amp;gt;
+	    &amp;lt;h1&amp;gt;Hello, world&amp;lt;/h1&amp;gt;
+	    &amp;lt;h2&amp;gt;Welcome to my Website&amp;lt;/h2&amp;gt;
+	  &amp;lt;/code&amp;gt;
+        &amp;lt;/pre&amp;gt;
+		</code>
+	</pre>
+
+				<!-- balise <blockquote> -->
+
+				<li>
+					<code>&lt;blockquote&gt;</code> : citation. Attribut
+					<code>cite</code> pour le lien vers la source de la citation.
+				</li>
 			</ul>
 		</section>
 
